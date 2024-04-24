@@ -9,7 +9,8 @@ const promocoes: Game[] = [
   {
     id: 1,
     category: 'Ação',
-    description: 'blablablablablablablablablablablabla',
+    description:
+      'Resident Evil 4, conhecido no Japão como Biohazard 4, é um jogo eletrônico de survival horror...',
     title: 'Resident Evil 4',
     system: 'Windows',
     infos: ['10%', 'R$ 250,00'],
@@ -18,7 +19,8 @@ const promocoes: Game[] = [
   {
     id: 2,
     category: 'Ação',
-    description: 'blablablablablablablablablablablabla',
+    description:
+      'Diablo IV é um RPG de ação em desenvolvimento pela Blizzard Entertainment.',
     title: 'Diablo',
     system: 'XBOX',
     infos: ['10%', 'R$ 250,00'],
@@ -26,8 +28,9 @@ const promocoes: Game[] = [
   },
   {
     id: 3,
-    category: 'Ação',
-    description: 'blablablablablablablablablablablabla',
+    category: 'RPG',
+    description:
+      'Uma aventura épica pela terra e pelos céus de Hyrule aguarda em The Legend of Zelda™',
     title: 'Zelda',
     system: 'Nintendo',
     infos: ['10%', 'R$ 250,00'],

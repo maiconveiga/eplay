@@ -6,11 +6,7 @@ import zoom from '../../assets/images/zoom.png'
 import Section from '../../components/Section'
 import { Items, Item, Action, Modal, ModalContent } from './styles'
 import fechar from '../../assets/images/fechar.png'
-
-interface GalleryItem {
-  type: string
-  url: string
-}
+import { GalleryItem } from '../../pages/Home'
 
 const mock = [
   {
@@ -29,13 +25,14 @@ const mock = [
 type Props = {
   defaultCover: string
   nameGame: string
+  items: GalleryItem[]
 }
 
 interface ModalState extends GalleryItem {
   isVisible: boolean
 }
 
-const Gallery = ({ defaultCover }: Props) => {
+const Gallery = ({ defaultCover, nameGame, items }: Props) => {
   const [modal, setModal] = useState<ModalState>({
     isVisible: false,
     type: 'image',
@@ -60,7 +57,7 @@ const Gallery = ({ defaultCover }: Props) => {
     <>
       <Section title={'Galeria'} background={'black'}>
         <Items>
-          {mock.map((mediaGame, index, nameGame) => (
+          {items.map((mediaGame, index, nameGame) => (
             <Item
               key={mediaGame.url}
               onClick={() => {
@@ -88,7 +85,7 @@ const Gallery = ({ defaultCover }: Props) => {
       <Modal className={modal.isVisible ? 'visivel' : ''}>
         <ModalContent className="container">
           <header>
-            <h4>Nome do jogo</h4>
+            <h4>{nameGame}</h4>
             <img
               src={fechar}
               alt=""

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { breakpoints, cores } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 import { ButtonContainer } from '../Button/styles'
 import close from '../../assets/images/fechar.png'
@@ -37,6 +37,11 @@ export const Sidebar = styled.aside`
   ${ButtonContainer} {
     max-width: 100%;
     width: 100%;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    max-width: 300px;
+    width: 80%;
   }
 `
 

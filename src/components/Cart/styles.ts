@@ -67,7 +67,7 @@ export const Quantity = styled.p`
 `
 export const CartItem = styled.li`
   display: flex;
-  border-bottom: 1px solid ${cores.conzaClaro};
+  border-top: 1px solid ${cores.conzaClaro};
   padding: 8px 0;
   position: relative;
   img {
